@@ -20,12 +20,12 @@ public class CalculatorTests {
 
     @Test
     public void multiplication_isCorrect() {
-        assertEquals(20, Calculation.sum(2, 10));
+        assertEquals(20, Calculation.multipl(2, 10));
     }
 
     @Test
     public void divided_isCorrect() {
-        assertEquals(8, Calculation.sum(72, 9));
+        assertEquals(8, Calculation.divide(72, 9));
     }
 
     @Test
