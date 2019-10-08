@@ -20,6 +20,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mResult =(TextView) findViewById(R.id.tv_result);
+        mCalculationInput = (EditText) findViewById(R.id.et_calculation_input);
+
+
 
         //TODO add some logic for setup views
 
@@ -31,7 +35,15 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                //TODO need implemented
+                Calculation calculation = new Calculation();
+               /* String value = mCalculationInput.getText().toString();
+                calculation.calculate(value);*/
+
+                mResult.setText(calculation.calculate(charSequence.toString()));
+
+
+
+
             }
 
             @Override
